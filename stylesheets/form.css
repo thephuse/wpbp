@@ -1,0 +1,50 @@
+form { 
+	margin-bottom: 20px; }
+fieldset { 
+	margin-bottom: 20px; }
+input[type="text"], 
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"], 
+textarea, 
+select {
+	border: 1px solid #ccc;
+	padding: 6px 4px;
+	outline: none;
+	color: #777;
+	margin: 0;
+	width: 210px;
+	max-width: 100%;
+	display: block;
+	margin-bottom: 10px;
+	background: #fff; }
+select { 
+	padding: 0; }
+textarea {
+	min-height: 60px; }
+label,
+legend { 
+	display: block; }
+select { 
+	width: 220px; }
+input[type="checkbox"] {
+	display: inline; }
+label span,
+legend span {
+	font-weight: normal;
+	font-size: 13px;
+	color: #444; }
+
+.error, .alert, .notice, .success, .info {padding:0.8em;margin-bottom:1em;border:2px solid #ddd;}
+.error, .alert {background:#fbe3e4;color:#8a1f11;border-color:#fbc2c4;}
+.notice {background:#fff6bf;color:#514721;border-color:#ffd324;}
+.success {background:#e6efc2;color:#264409;border-color:#c6d880;}
+.info {background:#d5edf8;color:#205791;border-color:#92cae4;}
+.error a, .alert a {color:#8a1f11;}
+.notice a {color:#514721;}
+.success a {color:#264409;}
+.info a {color:#205791;}
+.no-boxshadow input:invalid, 
+.no-boxshadow textarea:invalid { background-color: #f0dddd; }

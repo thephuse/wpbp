@@ -1,0 +1,272 @@
+@import url("normalize.css");
+@import url("form.css");
+
+$brandmain: #5021c6;
+$brandaccent: #d0007f;
+$sitewidth: 960px;
+
+%bodytext { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+%headers { font-family: "Chaparral Pro", chaparral-pro, Georgia, serif; }
+
+%clean {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+%ir {
+	display: inline-block;
+	text-align: left;
+	text-indent: -999em;
+	overflow: hidden;
+}
+
+/* @group Default Typog and Colours
+----------------------------------------------- */
+a, a:active, a:visited { color: $brandaccent; text-decoration: none; }
+a:hover { color: lighten($brandaccent,6%); }
+
+::-moz-selection{ background: #ff0; color:#000; text-shadow: none; }
+::selection { background:#ff0; color:#000; text-shadow: none; }
+a:link { -webkit-tap-highlight-color: $brandaccent; }
+
+img {
+	max-width: 100%;
+}
+
+body {
+	background: #fff;
+	color: #333;
+	@extend %bodytext;
+	font-size: 16px;
+	line-height: 1.5em;	
+	min-width: $sitewidth + 40;
+}
+
+h1, h2, h3 {
+	@extend %headers;
+}
+/* @end */
+
+
+/* @group Classes (buttons etc)
+----------------------------------------------- */
+a.btn, .btn, input[type="submit"] {
+	display: inline-block;
+	line-height: 1em;
+	position: relative;
+	margin-right: 1em;
+	&:visited {
+		
+	}
+	&:active {
+		top: 1px;
+	}
+}
+input.btn, input[type="submit"] {
+	@extend %bodytext;
+}
+/* @end */
+
+
+/* @group Form Elements
+----------------------------------------------- */
+input[type="text"],
+input[type="email"],
+textarea {
+	background: #fff;
+	border: 1px solid #ccc;
+	box-shadow: inset 0 1px 3px rgba(0,0,0,0.13);
+	color: #999;
+	@extend %bodytext;
+	font-size: 16px;
+	&:focus {
+		border-color: #aaa;
+		box-shadow: inset 0 1px 3px rgba(0,0,0,0.13);
+		color: #333;
+	}
+}
+/* @end */
+
+
+/* @group Nav
+----------------------------------------------- */
+nav {
+	ul {
+		
+	}
+	li {
+		
+	}
+	a {
+
+		&:visited {
+			
+		}
+	}
+	a:hover,
+	.current-menu-item > a {
+		
+	}
+	.sub-menu {
+
+	}
+}
+/* @end */
+
+
+/* @group Basics
+----------------------------------------------- */
+.container {
+	width: $sitewidth;
+	margin: 0 auto;
+}
+.main {
+	width: 100%;
+}
+.content, .sidebar {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.content {
+	float: left;
+	width: 70%;
+	&.full { // no sidebar
+		width: 100%;
+		float: none;
+	}
+}
+body > footer {
+	
+}
+article {
+	clear: both;
+	padding: 1px 0;
+}
+.meta {
+	
+}
+.excerpt {
+	
+}
+.sidebar {
+	float: left;
+	width: 30%;
+	padding: 0 0 0 20px;
+}
+/* @end */
+
+
+/* @group Rotator
+----------------------------------------------- */
+// use with the slidesjs plugin when slides are needed
+.slider {
+	position: relative;
+	height: 300px;
+	width: 660px;
+	margin-bottom: 1em;
+}
+.slides_container, .slides_control {
+	height: 100%;
+}
+.slide {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	height: 100%;
+	width: 660px;
+}
+.desc {
+	background: rgba($brandmain,0.6);
+	color: #fff;
+	padding: 6px 10px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 60%;
+	a, a:visited, a:hover {
+		color: #fff !important;
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
+.slides_pagination {
+	@extend %clean;
+	text-align: right;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	z-index: 100;
+	li {
+		display: inline-block;
+	}
+	a {	
+		border: 0;
+		background: rgba($brandmain,0.5);
+		color: #eee;
+		display: inline-block;
+		font-weight: bold;
+		padding: 2px 6px;
+		&:visited, &:hover {
+			color: #fff;
+			background: $brandmain;
+		}
+	}
+	.active a {
+		background: $brandmain;
+	}
+}
+/* @end */
+
+
+/* @group Pagination
+----------------------------------------------- */
+.nav {
+	text-align: right;
+}
+.prevbtn {
+	display: inline-block;
+	float: left;
+}
+/* @end */
+
+
+/* @group Sidebar
+----------------------------------------------- */
+.widget {
+	margin-bottom: 1.5em;
+}
+/* @end */
+
+
+/* @group Wordpress
+----------------------------------------------- */
+.alignright {
+	float: right;
+	margin: 0.5em 0 0.5em 1em;
+}
+.alignleft {
+	float: left;
+	margin: 0.5em 1em 0.5em 0;
+}
+.wp-caption-text {
+	
+}
+.screen-reader-text {
+	position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+#s { // the search input
+	background: url(../images/ico-search.png) no-repeat 10px center;
+	border-radius: 1.5em;
+	padding-left: 30px;
+	margin: 0;
+}
+/* @end */
+
+
+
+
